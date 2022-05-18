@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbex_app/screens/first_screen.dart';
 
 import 'package:tasbex_app/screens/second_screen.dart';
 
@@ -62,12 +63,12 @@ class _HomeAppState extends State<HomeApp> {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.black,
-            title: Text(
+            title: const Text(
               'Zikr Counter',
               style: TextStyle(fontStyle: FontStyle.italic),
             ),
             centerTitle: true,
-            bottom: TabBar(
+            bottom: const TabBar(
               tabs: [
                 Tab(
                   icon: Icon(Icons.home),
@@ -102,7 +103,8 @@ class _HomeAppState extends State<HomeApp> {
                           image: 'assets/images/image3.jpg',
                           name: 'Name: Islam',
                           sureName: 'SureName: Shamurov',
-                          number: 'Number: 8504734'),
+                          number: 'Number: 8504734',
+                      ),
                     ],
                   ),
                 )
@@ -111,6 +113,7 @@ class _HomeAppState extends State<HomeApp> {
           ),
         ));
   }
+
 
   Widget _firstPage() {
     return Scaffold(
@@ -131,9 +134,8 @@ class _HomeAppState extends State<HomeApp> {
                     result,
                     style: TextStyle(color: Colors.black),
                   ),
-                  onPressed: () {
-                    change();
-                  }),
+                  onPressed: change,
+              ),
             )
           ],
         ),
@@ -152,7 +154,8 @@ class _HomeAppState extends State<HomeApp> {
               });
             },
           ),
-        ));
+        )
+    );
   }
 
   Widget _account({image, name, sureName, number}) {

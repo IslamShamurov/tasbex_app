@@ -1,45 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:tasbex_app/screens/webview_screen.dart';
 
 class SecondScreen extends StatefulWidget {
+  static const String id = 'second_screen';
+
   int? totalS;
   int? totalA;
-
   int? totalO;
 
   SecondScreen({Key? key, this.totalO, this.totalA, this.totalS})
       : super(key: key);
-  static const String id = 'second_screen';
+
 
   @override
   State<SecondScreen> createState() => _SecondScreenState();
 }
 
 class _SecondScreenState extends State<SecondScreen> {
-  Widget _totalCounts({title, count}) {
-    return Container(
-      width: 200,
-      height: 200,
-      color: Colors.black,
-      margin: EdgeInsets.all(5),
-      padding: EdgeInsets.all(5),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            title,
-            style: TextStyle(color: Colors.white),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            count,
-            style: TextStyle(color: Colors.white),
-          ),
-        ],
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -62,10 +39,37 @@ class _SecondScreenState extends State<SecondScreen> {
           SizedBox(
             height: 20,
           ),
-          Image(
-              height: 350,
-              fit: BoxFit.cover,
-              image: AssetImage('assets/images/m1.jpg'))
+          // Image(
+          //     height: 350,
+          //     fit: BoxFit.cover,
+          //     image: AssetImage('assets/images/m1.jpg')),
+          const WebViewOnline(),
+        ],
+      ),
+    );
+  }
+
+  Widget _totalCounts({String? title, String? count}) {
+    return Container(
+      width: 200,
+      height: 200,
+      color: Colors.black,
+      margin: EdgeInsets.all(5),
+      padding: EdgeInsets.all(5),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            title!,
+            style: TextStyle(color: Colors.white),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            count!.toString(),
+            style: TextStyle(color: Colors.white),
+          ),
         ],
       ),
     );
