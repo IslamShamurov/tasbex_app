@@ -11,6 +11,6 @@ Mainly DefaultTabController widget Which unable me to create an app easily and w
 A few resources that I linked to this project
 
 - [My git Account](https://github.com/IslamShamurov)
-#  # ![image N 1] (![img.png](img.png))
+ # ![img.png](img.png)
 
 
