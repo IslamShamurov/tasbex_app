@@ -11,6 +11,6 @@ Mainly DefaultTabController widget Which unable me to create an app easily and w
 A few resources that I linked to this project
 
 - [My git Account](https://github.com/IslamShamurov)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [Image of the User Interface](assets/images/imageN1.jpg)
 
 
